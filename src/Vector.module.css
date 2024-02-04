@@ -1,0 +1,15 @@
+.vector,
+.vector * {
+    box-sizing: border-box;
+    
+}
+
+.vector {
+    box-sizing: border-box;
+    width: 0.98rem;
+    height: 0.854375rem;
+    position: relative;
+    overflow: visible;
+    background-color:rgb(0, 0, 0);
+    cursor: pointer;
+}
