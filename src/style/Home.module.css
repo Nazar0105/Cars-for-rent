@@ -1,0 +1,142 @@
+/* style/Home.module.css */
+.home-page {
+    background-color: #e7e7e8;
+    color: #121417;
+    padding: 20px;
+}
+
+.home-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #3470ff;
+    font-size: 2em;
+}
+
+p {
+    color: #000;
+    font-size: 1.2em;
+}
+
+.additional-info {
+    margin-bottom: 20px;
+}
+
+.why-choose-us {
+    margin-top: 20px;
+}
+
+.car-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.car-image {
+    width: calc(20% - 8px);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 8px;
+}
+
+.car-image:last-child {
+    margin-right: 0;
+}
+
+.car-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.car-image {
+    width: calc(20% - 8px);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.enlarged-image {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Стилі для стрілочок у галереї */
+.prev,
+.next {
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -1em;
+    color: #fff;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+.final-text {
+    color: #3470ff;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.catalog-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.catalog-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3470ff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.catalog-button:hover {
+    background-color: #0b44cd;
+}

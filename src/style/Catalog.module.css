@@ -1,0 +1,500 @@
+body {
+    overflow-x: hidden;
+}
+
+
+/*Catalog.module.css */
+.catalog-page {
+    background-color: #e7e7e8;
+    color: #121417;
+    padding: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3470ff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #0b44cd;
+}
+
+/* --------------------------------------------------------------------стилі фільтра----------------------------------------------------------------------- */
+
+/* Загальні стилі для контейнера фільтру */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    /* Центрує по горизонталі */
+    align-items: center;
+    /* Центрує по вертикалі */
+    gap: 18px;
+}
+
+/* Стилі для блока бренду автомобіля */
+.filter-element-Car-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filter-label-Car-brand {
+    color: #8a8a89;
+    font-family: "Manrope-Medium", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.filter-input-Car-brand {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.filter-input-text-Car-brand {
+    width: 224px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.filter-input-arrow-Car-brand {
+    color: #000000;
+    font-weight: 1000;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s ease;
+    background-color: #ffffff;
+    transform: rotate(90deg);
+    width: 15px;
+    height: 17px;
+    margin-left: -36px;
+    order: 1;
+}
+
+/* Стилі для блока ціни за годину */
+.filter-element-Price-hour {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filter-label-Price-hour {
+    color: #8a8a89;
+    font-family: "Manrope-Medium", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.filter-input-Price-hour {
+    display: flex;
+    align-items: center;
+    order: 2;
+}
+
+.filter-input-text-Price-hour {
+    width: 125px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.filter-input-arrow-Price-hour {
+    color: #000000;
+    font-weight: 1000;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s ease;
+    background-color: #ffffff;
+    transform: rotate(90deg);
+    width: 15px;
+    height: 17px;
+    margin-left: -36px;
+    order: 1;
+}
+
+/* Стилі для блока "Car mileage / km" */
+.filter-element-Car-mileage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.filter-label-Car-mileage {
+    color: #8a8a89;
+    font-family: "Manrope-Medium", sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.filter-input-Car-mileage {
+    display: flex;
+    align-items: center;
+}
+
+.filter-input-Car-mileage input {
+    width: 160px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.filter-input-Car-mileage input::placeholder {
+    color: #8a8a89;
+}
+
+.filter-input-Car-mileage button {
+    width: 136px;
+    height: 40px;
+    background-color: #3470ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    margin-left: 18px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-input-Car-mileage button:hover {
+    background-color: #0b44cd;
+}
+
+/* ---------------------------------------------------------------------------Стилі для каталогу ватомобілів----------------------------------------------------------------------------------*/
+.car-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 274px;
+    height: 426px;
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+/* Стилі для фото автомобіля */
+.car-image {
+    position: relative;
+    width: 274px;
+    height: 268px;
+    align-items: flex-start;
+    border-radius: 14px;
+    background-color: #f3f3f2;
+    overflow: hidden;
+}
+
+/* Стилі для блока з інформацією (назва, рік, ціна, опис) */
+.car-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    align-items: flex-start;
+}
+
+/* Стилі для назви автомобіля */
+.car-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+/* Стилі для року, ціни, адреси та компанії */
+.car-details {
+    font-family: "Manrope-Regular", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
+    color: rgba(18, 20, 23, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    /* Додайте обертання тексту на новий рядок */
+    align-items: center;
+}
+
+.car-year,
+.car-price {
+    color: #121417;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: Manrope, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+    white-space: nowrap;
+}
+
+.car-price {
+    margin-left: 50px;
+    /* Додайте бажаний відступ від року */
+}
+
+/* Інші стилі залишаються незмінними */
+
+
+.learn-more-button {
+    text-decoration: none;
+    color: white;
+    width: 280px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background-color: #3470ff;
+    cursor: pointer;
+}
+
+.learn-more-button:hover {
+    background-color: #0b44cd;
+}
+
+/* Стилі для контейнера каталогу */
+.car-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+
+.car-description {
+    width: 100%;
+    /* Заповнення всього доступного простору */
+    overflow: hidden;
+    /* Обрізання зайвого тексту */
+    text-overflow: ellipsis;
+    /* Додайте мітку зітнення для позначення обрізаного тексту */
+}
+
+.add-to-favorites-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #39abe0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-to-favorites-button:hover {
+    background-color: #0627f9;
+}
+      
+
+/* ------------------------------------------------------------------------------Стилі для модального вікна ---------------------------------------------------*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 10px 0px 30px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    /* overflow: auto; */
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.close-button {
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rental-button {
+    text-decoration: none;
+    color: white;
+    background-color: #3470ff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    margin-top: auto;
+    text-align: center;
+    width: 168px;
+    height: 20px;
+}
+
+.rental-button:hover {
+    background-color: #0b44cd;
+}
+
+.modal-car-image {
+    width: 100%;
+    /* Зображення буде адаптивним до ширини батьківського контейнера */
+    height: auto;
+    /* Адаптивна висота зображення */
+}
+
+.modal-info {
+    width: 100%;
+    max-height: 280px;
+        /* Задайте максимальну висоту тексту, яка не виштовхує кнопки */
+        overflow: auto;
+        /* Додайте прокрутку, якщо текст перевищує вказану висоту */
+        font-size: 14px;
+    word-wrap: break-word;
+}
+
+.modal-info::-webkit-scrollbar {
+    width: 12px;
+    /* Ширина вертикальної полоси прокрутки */
+}
+
+.modal-info::-webkit-scrollbar-thumb {
+    background-color: #3470ff;
+    /* Колір самої полоси прокрутки */
+    border-radius: 10px;
+    /* Радіус кутів полоси прокрутки */
+}
+
+.modal-info::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* Колір фону біля полоси прокрутки */
+}
+
+.close-button {
+    text-decoration: none;
+    color: white;
+    background-color: #3470ff;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 2%;
+    margin-right: 10px;
+}
+
+.close-button:hover {
+    background-color: #0b44cd;
+}
+
+.modal-btn {
+    display: flex;
+    gap: 150px;
+}
+
+.load-more-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #3470ff;
+    color: white;
+    border: none;
+    border-bottom: 2px solid #2554a9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.load-more-button:hover {
+    background-color: #0b44cd;
+}
+
+/* стилі списку марок авто */
+
+
+.filter-input-arrow-Car-brand {
+    cursor: pointer;
+}
+
+/* Зміни тут */
+.dropdown-list {
+    top: 100%;
+    position: absolute;
+    left: 0;
+    width: 224px;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    display: none;
+}
+
+.filter-input-Car-brand:hover .dropdown-list {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+
+.favorites-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3470ff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.favorites-button:hover {
+    background-color: #0627f9;
+}
+
+.catalog-btn {
+display: flex;
+gap: 1000px;
+}
